@@ -49,9 +49,9 @@ async function updateProduct(req, res, next) {
     product.replaceImage(req.file.filename)
   }
 
-  try {
+  try{
     await product.save()
-  } catch (error) {
+  } catch(error) {
     next(error)
     return
   }
